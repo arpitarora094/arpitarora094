@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap5.css">
+    <style>
+        @font-face {
+            font-family: myfont;
+            src: url(bad.ttf.ttf);
+        }
+        body
+        {        background-image: url(https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&w=600);
+            font-family: myfont;
+            
+            
+        }
+        button:hover{
+            background-color: black;
+            color:  white;
+            cursor: pointer;
+        }
+    
+        
+        .heading{
+            height: 80px;
+            width: 100%;
+            background-color: rgba(255, 206, 143, 0.188);
+        }
+        img{
+            height: 30px;
+            width: 30px;
+        }
+        h5{
+            margin-bottom: 10px;
+        }
+        .input{
+          float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="heading container form-control">
+        <h1>table calulator .... <img src="heart.png" alt=""></h1>
+        <h6>By Star_._.Shadow</h6>
+    </div>
+    <div class="container input " id="parent">
+        <input type="text" class=" form-control" id="table" placeholder="enter any value ">
+        <button onclick="save()">submit</button>
+   </div>
+   
+    <script>
+        function save()
+        {
+            let myinput=document.getElementById("table").value//input ki value
+            
+           for(let a=0;a<11;a++)//10 tk ka loop
+            
+          {    let mydisplay =document.createElement("div")//run time pe div create my display
+          
+               document.getElementById("parent").append(mydisplay)
+              let total=myinput*a
+             // console.log(`${myinput} * ${a} = ${total}`)
+              mydisplay.append(myinput+"*"+a+"="+total )
+            console.log (parent)
+          }
+        }
+        
+    </script>
+</body>
+</html>
